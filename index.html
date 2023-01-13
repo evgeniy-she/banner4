@@ -1,0 +1,177 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body style="margin: 0; padding: 0">
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+        font-size: 16px;
+      }
+
+      body * {
+        font-family: inherit;
+      }
+
+      .main-pm {
+        width: 630px;
+        margin: 0 auto;
+        background: #000;
+        position: relative;
+      }
+
+      .content-pm {
+        height: 0;
+        padding: 0 0 100px;
+        position: relative;
+        overflow: hidden;
+        background-color: #000;
+      }
+
+      .logo-pm {
+        position: absolute;
+        left: 2%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        height: 32%;
+        z-index: 0;
+      }
+
+      .legal-pm {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: auto;
+        height: 100%;
+        z-index: 0;
+      }
+
+      .bonus-pm {
+        position: absolute;
+        right: 21%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        height: 67%;
+        z-index: 0;
+      }
+
+      .block-teams {
+        font-family: "Pari-Match";
+        font-size: 22.32px;
+        font-style: italic;
+        display: block;
+        position: absolute;
+        text-align: center;
+        left: 19%;
+        top: 1%;
+        color: #ffffff;
+        text-transform: uppercase;
+        white-space: nowrap;
+        line-height: 100%;
+        width: 40.3%;
+      }
+
+      .block-teams .team-first {
+        display: block;
+      }
+
+      .vs {
+        display: inline-block;
+        color: #f8ff13;
+        font-size: 13.5px;
+        margin: 0 4px;
+      }
+      .block-teams .team-second {
+        display: inline-block;
+      }
+
+      .koefs {
+        display: flex;
+        font-size: 14px;
+        font-family: "TT Firs Neue";
+        font-weight: 600;
+        text-transform: uppercase;
+        position: absolute;
+        z-index: 3;
+        bottom: 11%;
+        left: 17%;
+      }
+
+      .koefs * {
+        line-height: inherit;
+        color: #fff;
+      }
+
+      .koefs__cell {
+        margin: 0 4px;
+      }
+
+      .koefs__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 34px;
+        width: 68px;
+        background-color: #1a1a1a;
+        padding: 0 9px;
+        border: 1px solid #484848;
+        border-radius: 16px;
+      }
+
+      .koefs__txt {
+        text-align: center;
+        padding-right: 3px;
+        color: #c2c2c2;
+      }
+    </style>
+    <div class="main-pm">
+      <div class="content-pm">
+        <img src="images/logo-pm.svg" alt="" class="logo-pm" />
+        <div class="block-teams">
+          <div class="team-first"></div>
+          <div class="vs">vs</div>
+          <div class="team-second"></div>
+        </div>
+        <div class="koefs">
+          <div class="koefs__cell">
+            <div class="koefs__item">
+              <div class="koefs__txt">1</div>
+              <span class="team-1">0.00</span>
+            </div>
+          </div>
+          <div class="koefs__cell">
+            <div class="koefs__item">
+              <div class="koefs__txt">&nbsp;х</div>
+              <span class="team-draw">0.00</span>
+            </div>
+          </div>
+          <div class="koefs__cell">
+            <div class="koefs__item">
+              <div class="koefs__txt">2</div>
+              <span class="team-2">0.00</span>
+            </div>
+          </div>
+        </div>
+        <img src="images/bonus-pm.svg" alt="" class="bonus-pm" />
+        <img src="images/legal-pm.png" alt="" class="legal-pm" />
+      </div>
+    </div>
+    <!-- <script src="js/feedPM.js"></script> -->
+    <script>    
+      getFeed(false, [
+        "team-1",
+        "team-2",
+        "team-draw",
+        "team-first",
+        "team-second",
+      ]);
+    </script>
+  </body>
+</html>
